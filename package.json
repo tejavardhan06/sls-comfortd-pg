@@ -1,0 +1,19 @@
+{
+  "name": "sls-comforts-pg",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:assets && tailwindcss -i ./src/tailwind.css -o ./styles.css --minify && node ./scripts/build-site.js",
+    "build:assets": "node ./scripts/build-assets.js",
+    "watch": "tailwindcss -i ./src/tailwind.css -o ./styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.1.1",
+    "@fontsource/inter": "^5.1.1",
+    "@fontsource/plus-jakarta-sans": "^5.1.1",
+    "gsap": "^3.12.5",
+    "lucide": "^0.468.0"
+  }
+}

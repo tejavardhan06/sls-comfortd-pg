@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SLS Comforts Girls PG — Verified Student Living, 1 Min From Campus</title>
+<meta name="description" content="SLS Comforts Girls PG offers safe, homely student living with verified security, daily meals, high-speed Wi-Fi, and dedicated study spaces.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0e0f15">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="SLS Comforts Girls PG — Near Kristu Jayanti College">
+<meta property="og:description" content="Safe girls PG accommodation in Kothanur, Bengaluru, with daily meals, Wi-Fi, study spaces, gym, and 24/7 security.">
+<meta property="og:image" content="media/IMG_20250303_164253.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LodgingBusiness",
+      "name": "SLS Comforts Girls PG — A Block",
+      "description": "Girls-only student PG opposite Kristu Jayanti College with meals, Wi-Fi, study spaces, gym, and 24/7 security.",
+      "telephone": "+91-63606-32742",
+      "hasMap": "https://share.google/CDcQvb9XAm4qNpDab",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gate 01, St. Mary's Church Road, opposite Kristu Jayanti College, K. Narayanapura P.O., Kothanur",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560077",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "LodgingBusiness",
+      "name": "SLS Comforts Girls PG — B Block",
+      "description": "Girls-only student PG near Kristu Jayanti College with meals, Wi-Fi, study spaces, and 24/7 security.",
+      "telephone": "+91-63606-32742",
+      "hasMap": "https://share.google/N2vpLyDHGszIqOJlW",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "243/5, No. 2 Main Road, near Kristu Jayanti College, Kothanur",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560077",
+        "addressCountry": "IN"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Compiled Tailwind styles -->
+<link rel="stylesheet" href="styles.css">
+<!-- Lucide Icons -->
+<script defer src="vendor/lucide.min.js"></script>
+<!-- GSAP -->
+<script defer src="vendor/gsap.min.js"></script>
+<script defer src="vendor/ScrollTrigger.min.js"></script>
+
+<link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="font-body antialiased overflow-x-hidden selection:bg-indigo-500">
+
+<div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-amber focus:text-ink focus:px-4 focus:py-3 focus:rounded-lg focus:font-semibold">Skip to main content</a>
+
+<!-- ============ NAVIGATION ============ -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div id="navInner" class="mt-3 rounded-2xl glass-dark border border-white/10 shadow-card transition-all duration-300">
+      <div class="flex items-center justify-between px-4 lg:px-6 h-16">
+        <a href="#home" class="flex items-center gap-2.5 group">
+          <span class="relative w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center overflow-hidden">
+            <i data-lucide="key-round" class="w-4.5 h-4.5 text-amber relative z-10" style="width:18px;height:18px"></i>
+          </span>
+          <span class="font-display font-extrabold text-lg tracking-tight text-white">SLS <span class="text-amber">Comforts</span> <span class="hidden sm:inline">PG</span></span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-porcelain/80">
+          <a href="#about" class="nav-link hover:text-white transition-colors">About Us</a>
+          <a href="#rooms" class="nav-link hover:text-white transition-colors">Rooms</a>
+          <a href="#amenities" class="nav-link hover:text-white transition-colors">Amenities</a>
+          <a href="#video-tour" class="nav-link hover:text-white transition-colors">Video Tours</a>
+          <a href="#gallery" class="nav-link hover:text-white transition-colors">Photo Gallery</a>
+          <a href="#menu" class="nav-link hover:text-white transition-colors">Food Menu</a>
+          <a href="#contact" class="nav-link hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="tel:+916360632742" class="text-sm font-semibold text-porcelain/80 hover:text-white flex items-center gap-1.5">
+            <i data-lucide="phone" class="w-4 h-4 text-amber"></i> +91 63606 32742
+          </a>
+          <button onclick="openModal()" class="inline-flex items-center gap-2 bg-amber text-ink text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-amber-400 transition-colors duration-300 shadow-lift">
+            Schedule Visit <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <button id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-white/10 text-white" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <i data-lucide="menu" id="menuIcon" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10 px-6 py-5 space-y-4 bg-darkcard rounded-b-2xl">
+        <a href="#about" class="block font-medium text-porcelain/80">About Us</a>
+        <a href="#rooms" class="block font-medium text-porcelain/80">Rooms</a>
+        <a href="#amenities" class="block font-medium text-porcelain/80">Amenities</a>
+        <a href="#video-tour" class="block font-medium text-porcelain/80">Video Tours</a>
+        <a href="#gallery" class="block font-medium text-porcelain/80">Photo Gallery</a>
+        <a href="#menu" class="block font-medium text-porcelain/80">Food Menu</a>
+        <a href="#contact" class="block font-medium text-porcelain/80">Contact</a>
+        <button onclick="openModal()" class="w-full inline-flex items-center justify-center gap-2 bg-amber text-ink text-sm font-bold px-5 py-3 rounded-xl mt-2">
+          Schedule Visit <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main-content" tabindex="-1">
+<!-- ============ HERO SECTION ============ -->
+<section id="home" class="relative min-h-[95vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-ink">
+  
+  <img id="heroPoster" src="media/hero-pc-poster.webp" alt="" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-90 pointer-events-none z-0">
+  <video
+    id="heroVideo"
+    muted
+    loop
+    playsinline
+    preload="none"
+    poster="media/hero-pc-poster.webp"
+    aria-hidden="true"
+    data-mobile-src="hero-mobile.mp4"
+    data-desktop-src="hero-pc.mp4"
+    class="absolute inset-0 w-full h-full object-cover opacity-90 pointer-events-none z-0">
+    <source type="video/mp4">
+  </video>
+
+  <div class="absolute inset-0 bg-gradient-to-t from-ink/75 via-transparent to-ink/40 z-10"></div>
+  <div id="heroSpotlight" class="hero-spotlight" aria-hidden="true"></div>
+
+  <div class="relative z-20 max-w-5xl mx-auto px-5 lg:px-8 text-center flex flex-col items-center">
+
+    <h1 id="heroHeading" class="fade-up font-display font-extrabold text-4xl sm:text-6xl lg:text-[4.2rem] leading-[1.08] tracking-tight text-white max-w-4xl">
+      Feel like home,
+      <span class="block mt-1">
+        <span class="text-amber">1 minute</span> from campus.
+      </span>
+    </h1>
+
+    <p id="heroSub" class="fade-up mt-6 text-base sm:text-lg text-porcelain/90 leading-relaxed max-w-2xl font-normal">
+      SLS Comforts PG runs secure, homely PG blocks built exclusively for female students — A Block located just 1 minute from college, daily fresh meals served thrice a day, in-house gym, dedicated study areas, verified guards, and fibre Wi-Fi.
+    </p>
+
+    <div id="heroCtas" class="fade-up mt-8 flex flex-wrap items-center justify-center gap-4">
+      <button onclick="document.getElementById('rooms').scrollIntoView({behavior:'smooth'})" class="cta-btn group inline-flex items-center gap-2 bg-amber text-ink font-bold px-7 py-3.5 rounded-xl hover:bg-amber-400 transition-all duration-300 shadow-lift">
+        <span class="relative z-10 flex items-center gap-2">Explore Rooms <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i></span>
+      </button>
+      <button onclick="document.getElementById('video-tour').scrollIntoView({behavior:'smooth'})" class="group inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-xl glass-card text-white hover:bg-black/70 transition-colors duration-300">
+        <i data-lucide="play" class="w-4.5 h-4.5 text-amber transition-transform duration-300 group-hover:scale-110" style="width:18px;height:18px"></i> Watch Video Tours
+      </button>
+    </div>
+
+    <!-- Stats Bar -->
+    <div id="heroStats" class="fade-up mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-3xl w-full pt-8 border-t border-white/20">
+      <div class="glass-card p-4 rounded-2xl">
+        <p class="font-display font-extrabold text-2xl lg:text-3xl text-white"><span class="counter" data-target="24">0</span>/<span class="counter" data-target="7">0</span></p>
+        <p class="text-[11px] text-white/80 mt-1 tag-chip uppercase tracking-wide">Security &amp; CCTV</p>
+      </div>
+      <div class="glass-card p-4 rounded-2xl">
+        <p class="font-display font-extrabold text-2xl lg:text-3xl text-white"><span class="counter" data-target="100">0</span>%</p>
+        <p class="text-[11px] text-white/80 mt-1 tag-chip uppercase tracking-wide">Homely Food (3x)</p>
+      </div>
+      <div class="glass-card p-4 rounded-2xl">
+        <p class="font-display font-extrabold text-2xl lg:text-3xl text-white"><span class="counter" data-target="500">0</span>+</p>
+        <p class="text-[11px] text-white/80 mt-1 tag-chip uppercase tracking-wide">Happy Residents</p>
+      </div>
+      <div class="glass-card p-4 rounded-2xl">
+        <p class="font-display font-extrabold text-2xl lg:text-3xl text-white"><span class="counter" data-target="1">0</span> min</p>
+        <p class="text-[11px] text-white/80 mt-1 tag-chip uppercase tracking-wide">A Block To Campus</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ MINIMALISTIC ABOUT US ============ -->
+<section id="about" class="py-20 lg:py-28 bg-ink text-porcelain relative overflow-hidden transition-colors duration-300 border-t border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 relative">
+    
+    <div class="max-w-3xl mb-12 reveal">
+      <p class="tag-chip text-xs font-semibold text-amber uppercase tracking-widest mb-3">01 — About Us</p>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white leading-tight">
+        A peaceful sanctuary built exclusively for student life.
+      </h2>
+      <p class="mt-4 text-porcelain/75 leading-relaxed text-base sm:text-lg">
+        Located just 1 minute from campus gates, SLS Comforts PG provides clean, secure, and focused living blocks for girls. We blend peaceful academic environments with home-cooked nourishment and fitness amenities.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal">
+      <div class="glass-card p-6 rounded-3xl border border-white/10 flex flex-col justify-between h-48">
+        <div class="w-10 h-10 rounded-xl bg-amber/10 flex items-center justify-center text-amber">
+          <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg text-white">Girls Only</h4>
+          <p class="text-xs text-porcelain/60 mt-1">A peaceful, distraction-free environment exclusively for female students.</p>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-3xl border border-white/10 flex flex-col justify-between h-48">
+        <div class="w-10 h-10 rounded-xl bg-indigo-400/10 flex items-center justify-center text-indigo-400">
+          <i data-lucide="dumbbell" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg text-white">In-House Gym</h4>
+          <p class="text-xs text-porcelain/60 mt-1">Equipped workout space and training weights inside the property.</p>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-3xl border border-white/10 flex flex-col justify-between h-48">
+        <div class="w-10 h-10 rounded-xl bg-emerald/10 flex items-center justify-center text-emerald">
+          <i data-lucide="utensils" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg text-white">Fresh 3x Meals</h4>
+          <p class="text-xs text-porcelain/60 mt-1">Nutritious breakfast, lunch, and dinner cooked fresh daily on-site.</p>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-3xl border border-white/10 flex flex-col justify-between h-48">
+        <div class="w-10 h-10 rounded-xl bg-amber/10 flex items-center justify-center text-amber">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg text-white">24/7 Security</h4>
+          <p class="text-xs text-porcelain/60 mt-1">Biometric logging, round-the-clock CCTV, resident warden, and 10 PM gate safety.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ ROOM SHOWCASE WITH CRISP PHOTOS & HOVER VIDEO ============ -->
+<section id="rooms" class="py-24 lg:py-32 bg-porcelain text-ink transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 reveal">
+      <div class="max-w-xl">
+        <p class="tag-chip text-xs font-semibold text-indigo uppercase tracking-widest mb-3">02 — Blocks &amp; Rooms</p>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight">Pick the room that fits your rhythm</h2>
+      </div>
+      <p class="text-ink/60 max-w-sm">Hover over any room to see a live tour clip. Every layout comes with attached washroom, daily housekeeping, and fibre Wi-Fi as standard.</p>
+    </div>
+
+    <!-- Tabs -->
+    <div id="roomTabs" class="flex flex-wrap gap-3 mb-10" role="tablist" aria-label="Room sharing options">
+      <button type="button" role="tab" aria-selected="true" aria-controls="roomGrid" data-tab="single" class="room-tab tab-btn active flex items-center gap-2 px-5 py-2.5 rounded-full border border-clay font-semibold text-sm transition-colors duration-300">
+        <span class="tab-dot w-1.5 h-1.5 rounded-full bg-ink/30"></span> Single Sharing
+      </button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="roomGrid" data-tab="double" class="room-tab tab-btn flex items-center gap-2 px-5 py-2.5 rounded-full border border-clay font-semibold text-sm transition-colors duration-300">
+        <span class="tab-dot w-1.5 h-1.5 rounded-full bg-ink/30"></span> Double Sharing
+      </button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="roomGrid" data-tab="triple" class="room-tab tab-btn flex items-center gap-2 px-5 py-2.5 rounded-full border border-clay font-semibold text-sm transition-colors duration-300">
+        <span class="tab-dot w-1.5 h-1.5 rounded-full bg-ink/30"></span> Triple Sharing
+      </button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="roomGrid" data-tab="quad" class="room-tab tab-btn flex items-center gap-2 px-5 py-2.5 rounded-full border border-clay font-semibold text-sm transition-colors duration-300">
+        <span class="tab-dot w-1.5 h-1.5 rounded-full bg-ink/30"></span> 4-Sharing
+      </button>
+    </div>
+
+    <div class="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl border border-clay bg-white px-5 py-4">
+      <p class="text-sm text-ink/65">Rent, deposit, and current availability are shared privately based on your preferred room.</p>
+      <a href="https://wa.me/916360632742?text=Hello%20SLS%20Comforts%20PG%2C%20please%20share%20the%20current%20rent%2C%20deposit%2C%20and%20availability." target="_blank" rel="noopener" class="shrink-0 inline-flex items-center gap-2 text-sm font-bold text-emerald hover:text-emerald-600">
+        <i data-lucide="message-circle" class="w-4 h-4"></i> Ask privately on WhatsApp
+      </a>
+    </div>
+
+    <div id="roomGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============ AMENITIES ============ -->
+<section id="amenities" class="py-24 lg:py-32 relative overflow-hidden bg-white text-ink transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 relative">
+    <div class="max-w-xl mb-14 reveal">
+      <p class="tag-chip text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-3">03 — Amenities</p>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight">Everything included. Nothing improvised.</h2>
+    </div>
+
+    <div id="amenitiesGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+  </div>
+</section>
+
+<!-- ============ SEPARATE SECTION: REDUCED HEIGHT VIDEO TOURS ============ -->
+<section id="video-tour" class="py-20 lg:py-28 bg-darkcard text-porcelain relative overflow-hidden border-t border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 relative">
+    
+    <div class="max-w-2xl mb-12 reveal">
+      <p class="tag-chip text-xs font-semibold text-amber uppercase tracking-widest mb-2">04 — Video Walkthroughs</p>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white">Hover to watch video tours</h2>
+    </div>
+
+    <!-- LINE 1: A BLOCK VIDEOS -->
+    <div class="mb-12 reveal">
+      <div class="flex items-center gap-3 mb-6 pb-2 border-b border-white/10">
+        <span class="w-3 h-3 rounded-full bg-amber"></span>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-white tracking-tight">A Block Tours</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        
+        <div class="hover-video-card glass-card rounded-3xl overflow-hidden border border-white/15 p-2 flex flex-col justify-between">
+          <div class="relative w-full aspect-[9/13] max-h-[380px] bg-black rounded-2xl overflow-hidden shadow-inner mx-auto">
+            <img src="media/video-block-a-building-poster.webp" alt="" loading="lazy" decoding="async" class="video-poster">
+            <video 
+              muted 
+              loop 
+              playsinline 
+              preload="none"
+              poster="media/video-block-a-building-poster.webp" class="interactive-hover-video w-full h-full object-cover">
+              <source data-src="video-block-a-building.mp4" type="video/mp4">
+            </video>
+            <div class="play-indicator absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+              <div class="w-11 h-11 rounded-full bg-amber text-ink flex items-center justify-center shadow-lift">
+                <i data-lucide="play" class="w-4.5 h-4.5 fill-ink ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 pt-3 text-center">
+            <h4 class="font-display font-bold text-base sm:text-lg text-white">A Block Building View</h4>
+          </div>
+        </div>
+
+        <div class="hover-video-card video-landscape glass-card rounded-3xl overflow-hidden border border-white/15 p-2 flex flex-col justify-between">
+          <div class="relative w-full aspect-[9/13] max-h-[380px] bg-black rounded-2xl overflow-hidden shadow-inner mx-auto">
+            <img src="media/video-corridor-a-poster.webp" alt="" loading="lazy" decoding="async" class="video-poster">
+            <video 
+              muted 
+              loop 
+              playsinline 
+              preload="none"
+              poster="media/video-corridor-a-poster.webp" class="interactive-hover-video w-full h-full object-cover">
+              <source data-src="video-corridor-a.mp4" type="video/mp4">
+            </video>
+            <div class="play-indicator absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+              <div class="w-11 h-11 rounded-full bg-amber text-ink flex items-center justify-center shadow-lift">
+                <i data-lucide="play" class="w-4.5 h-4.5 fill-ink ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 pt-3 text-center">
+            <h4 class="font-display font-bold text-base sm:text-lg text-white">A Block Corridor View</h4>
+          </div>
+        </div>
+
+        <div class="hover-video-card glass-card rounded-3xl overflow-hidden border border-white/15 p-2 flex flex-col justify-between">
+          <div class="relative w-full aspect-[9/13] max-h-[380px] bg-black rounded-2xl overflow-hidden shadow-inner mx-auto">
+            <img src="media/video-dining-a-poster.webp" alt="" loading="lazy" decoding="async" class="video-poster">
+            <video 
+              muted 
+              loop 
+              playsinline 
+              preload="none"
+              poster="media/video-dining-a-poster.webp" class="interactive-hover-video w-full h-full object-cover">
+              <source data-src="video-dining-a.mp4" type="video/mp4">
+            </video>
+            <div class="play-indicator absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+              <div class="w-11 h-11 rounded-full bg-amber text-ink flex items-center justify-center shadow-lift">
+                <i data-lucide="play" class="w-4.5 h-4.5 fill-ink ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 pt-3 text-center">
+            <h4 class="font-display font-bold text-base sm:text-lg text-white">A Block Dining Area</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- LINE 2: B BLOCK VIDEOS -->
+    <div class="reveal">
+      <div class="flex items-center gap-3 mb-6 pb-2 border-b border-white/10">
+        <span class="w-3 h-3 rounded-full bg-emerald"></span>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-white tracking-tight">B Block Tours</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        
+        <div class="hover-video-card glass-card rounded-3xl overflow-hidden border border-white/15 p-2 flex flex-col justify-between">
+          <div class="relative w-full aspect-[9/13] max-h-[380px] bg-black rounded-2xl overflow-hidden shadow-inner mx-auto">
+            <img src="media/video-block-b-building-poster.webp" alt="" loading="lazy" decoding="async" class="video-poster">
+            <video 
+              muted 
+              loop 
+              playsinline 
+              preload="none"
+              poster="media/video-block-b-building-poster.webp" class="interactive-hover-video w-full h-full object-cover">
+              <source data-src="video-block-b-building.mp4" type="video/mp4">
+            </video>
+            <div class="play-indicator absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+              <div class="w-11 h-11 rounded-full bg-amber text-ink flex items-center justify-center shadow-lift">
+                <i data-lucide="play" class="w-4.5 h-4.5 fill-ink ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 pt-3 text-center">
+            <h4 class="font-display font-bold text-base sm:text-lg text-white">B Block Building View</h4>
+          </div>
+        </div>
+
+        <div class="hover-video-card video-landscape glass-card rounded-3xl overflow-hidden border border-white/15 p-2 flex flex-col justify-between">
+          <div class="relative w-full aspect-[9/13] max-h-[380px] bg-black rounded-2xl overflow-hidden shadow-inner mx-auto">
+            <img src="media/video-corridor-b-poster.webp" alt="" loading="lazy" decoding="async" class="video-poster">
+            <video 
+              muted 
+              loop 
+              playsinline 
+              preload="none"
+              poster="media/video-corridor-b-poster.webp" class="interactive-hover-video w-full h-full object-cover">
+              <source data-src="video-corridor-b.mp4" type="video/mp4">
+            </video>
+            <div class="play-indicator absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+              <div class="w-11 h-11 rounded-full bg-amber text-ink flex items-center justify-center shadow-lift">
+                <i data-lucide="play" class="w-4.5 h-4.5 fill-ink ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 pt-3 text-center">
+            <h4 class="font-display font-bold text-base sm:text-lg text-white">B Block Corridor View</h4>
+          </div>
+        </div>
+
+        <div class="hover-video-card glass-card rounded-3xl overflow-hidden border border-white/15 p-2 flex flex-col justify-between">
+          <div class="relative w-full aspect-[9/13] max-h-[380px] bg-black rounded-2xl overflow-hidden shadow-inner mx-auto">
+            <img src="media/video-dining-b-poster.webp" alt="" loading="lazy" decoding="async" class="video-poster">
+            <video 
+              muted 
+              loop 
+              playsinline 
+              preload="none"
+              poster="media/video-dining-b-poster.webp" class="interactive-hover-video w-full h-full object-cover">
+              <source data-src="video-dining-b.mp4" type="video/mp4">
+            </video>
+            <div class="play-indicator absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+              <div class="w-11 h-11 rounded-full bg-amber text-ink flex items-center justify-center shadow-lift">
+                <i data-lucide="play" class="w-4.5 h-4.5 fill-ink ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-2 pt-3 text-center">
+            <h4 class="font-display font-bold text-base sm:text-lg text-white">B Block Dining Area</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SEPARATE SECTION: PHOTO GALLERY ============ -->
+<section id="gallery" class="py-24 lg:py-32 bg-porcelain text-ink transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 reveal">
+      <div class="max-w-xl">
+        <p class="tag-chip text-xs font-semibold text-indigo uppercase tracking-widest mb-3">05 — Photo Gallery</p>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight">Verified interior snapshots</h2>
+      </div>
+
+      <div class="flex flex-wrap gap-2" id="galleryFilters" aria-label="Filter photo gallery">
+        <button type="button" data-cat="all" aria-pressed="true" class="gallery-pill active text-sm font-semibold px-4 py-2 rounded-full border border-clay">All</button>
+        <button type="button" data-cat="rooms" aria-pressed="false" class="gallery-pill text-sm font-semibold px-4 py-2 rounded-full border border-clay">Rooms</button>
+        <button type="button" data-cat="gym" aria-pressed="false" class="gallery-pill text-sm font-semibold px-4 py-2 rounded-full border border-clay">Gym</button>
+        <button type="button" data-cat="study" aria-pressed="false" class="gallery-pill text-sm font-semibold px-4 py-2 rounded-full border border-clay">Study Lounge</button>
+        <button type="button" data-cat="dining" aria-pressed="false" class="gallery-pill text-sm font-semibold px-4 py-2 rounded-full border border-clay">Dining &amp; Kitchen</button>
+      </div>
+    </div>
+
+    <div id="galleryGrid" class="columns-1 sm:columns-2 lg:columns-3 gap-5 [column-fill:_balance]"></div>
+  </div>
+</section>
+<section id="menu" class="py-24 lg:py-32 bg-ink text-porcelain relative overflow-hidden transition-colors duration-300">
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image:radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size:24px 24px;"></div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 relative">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 reveal">
+      <div class="max-w-xl">
+        <p class="tag-chip text-xs font-semibold text-amber uppercase tracking-widest mb-3">06 — Food Menu</p>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight text-white">This week on the mess board</h2>
+      </div>
+      <p class="text-porcelain/50 max-w-sm">North &amp; South Indian rotation, cooked fresh thrice daily (breakfast, lunch, and dinner) for residents.</p>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-8" id="dayTabs" aria-label="Select food menu day">
+      <button type="button" data-day="Mon" aria-pressed="true" class="day-tab tag-chip text-sm font-semibold px-4 py-2 rounded-full border border-white/15 text-porcelain/60 hover:border-white/40 transition-colors duration-300">Mon</button>
+      <button type="button" data-day="Tue" class="day-tab tag-chip text-sm font-semibold px-4 py-2 rounded-full border border-white/15 text-porcelain/60 hover:border-white/40 transition-colors duration-300">Tue</button>
+      <button type="button" data-day="Wed" class="day-tab tag-chip text-sm font-semibold px-4 py-2 rounded-full border border-white/15 text-porcelain/60 hover:border-white/40 transition-colors duration-300">Wed</button>
+      <button type="button" data-day="Thu" class="day-tab tag-chip text-sm font-semibold px-4 py-2 rounded-full border border-white/15 text-porcelain/60 hover:border-white/40 transition-colors duration-300">Thu</button>
+      <button type="button" data-day="Fri" class="day-tab tag-chip text-sm font-semibold px-4 py-2 rounded-full border border-white/15 text-porcelain/60 hover:border-white/40 transition-colors duration-300">Fri</button>
+      <button type="button" data-day="Sat" class="day-tab tag-chip text-sm font-semibold px-4 py-2 rounded-full border border-white/15 text-porcelain/60 hover:border-white/40 transition-colors duration-300">Sat</button>
+      <button type="button" data-day="Sun" class="day-tab tag-chip text-sm font-semibold px-4 py-2 rounded-full border border-white/15 text-porcelain/60 hover:border-white/40 transition-colors duration-300">Sun</button>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="mealGrid" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="py-24 lg:py-32 bg-white text-ink overflow-hidden transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 reveal">
+      <div class="max-w-xl">
+        <p class="tag-chip text-xs font-semibold text-amber-600 uppercase tracking-widest mb-3">07 — Testimonials</p>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight">Resident stories and verified Google reviews</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-3" aria-label="Google review links">
+        <a href="https://share.google/CDcQvb9XAm4qNpDab" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-porcelain border border-clay rounded-2xl px-5 py-4 hover:border-amber hover:-translate-y-1 transition-all duration-300">
+          <i data-lucide="star" class="w-5 h-5 text-amber fill-amber"></i>
+          <span><strong class="block text-sm">A Block reviews</strong><span class="text-xs text-ink/50">Read current reviews on Google</span></span>
+        </a>
+        <a href="https://share.google/N2vpLyDHGszIqOJlW" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-porcelain border border-clay rounded-2xl px-5 py-4 hover:border-amber hover:-translate-y-1 transition-all duration-300">
+          <i data-lucide="star" class="w-5 h-5 text-amber fill-amber"></i>
+          <span><strong class="block text-sm">B Block reviews</strong><span class="text-xs text-ink/50">Read current reviews on Google</span></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div id="testiTrack" class="flex gap-6 transition-transform duration-500 ease-out" aria-live="polite"></div>
+
+      <div class="flex items-center justify-center gap-3 mt-10">
+      <button type="button" onclick="shiftTesti(-1)" aria-label="Previous testimonial" class="w-11 h-11 rounded-full border border-clay flex items-center justify-center hover:bg-ink hover:text-white transition-colors duration-300">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+        <div class="flex gap-2" id="testiDots" aria-label="Choose testimonial"></div>
+        <button type="button" onclick="shiftTesti(1)" aria-label="Next testimonial" class="w-11 h-11 rounded-full border border-clay flex items-center justify-center hover:bg-ink hover:text-white transition-colors duration-300">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-24 lg:py-32 bg-porcelain text-ink transition-colors duration-300">
+  <div class="max-w-4xl mx-auto px-5 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <p class="tag-chip text-xs font-semibold text-indigo uppercase tracking-widest mb-3">08 — FAQ</p>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight">Questions parents ask first</h2>
+    </div>
+
+    <div id="faqList" class="space-y-3"></div>
+
+    <div class="mt-12 text-center bg-white border border-clay rounded-3xl p-8">
+      <p class="font-display font-bold text-xl mb-2">Still deciding?</p>
+      <p class="text-ink/60 mb-6">Chat with our residence manager on WhatsApp — replies in minutes, no bots.</p>
+      <a href="https://wa.me/916360632742" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-emerald text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-emerald-600 transition-colors duration-300">
+        <i data-lucide="message-circle" class="w-4.5 h-4.5" style="width:18px;height:18px"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="bg-ink text-porcelain pt-20 pb-8 border-t border-white/10 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 mb-16">
+      <div class="lg:col-span-4">
+        <div class="flex items-center gap-2.5 mb-5">
+          <span class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center">
+            <i data-lucide="key-round" class="w-4.5 h-4.5 text-amber" style="width:18px;height:18px"></i>
+          </span>
+          <span class="font-display font-extrabold text-lg">SLS <span class="text-amber">Comforts</span> PG</span>
+        </div>
+        <p class="text-porcelain/50 text-sm leading-relaxed max-w-xs mb-6">Verified student PG for girls — A Block and B Block, one standard of care.</p>
+      </div>
+
+      <div class="lg:col-span-2">
+        <p class="font-semibold text-sm mb-4 text-porcelain/40 tag-chip uppercase tracking-widest">Explore</p>
+        <ul class="space-y-3 text-sm text-porcelain/70">
+          <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="#rooms" class="hover:text-white transition-colors">Rooms</a></li>
+          <li><a href="#video-tour" class="hover:text-white transition-colors">Video Tours</a></li>
+          <li><a href="#gallery" class="hover:text-white transition-colors">Photo Gallery</a></li>
+          <li><a href="#menu" class="hover:text-white transition-colors">Food Menu</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-2">
+        <p class="font-semibold text-sm mb-4 text-porcelain/40 tag-chip uppercase tracking-widest">Quick Help</p>
+        <ul class="space-y-3 text-sm text-porcelain/70">
+          <li><a href="https://wa.me/916360632742?text=Hello%2C%20please%20share%20the%20booking%20and%20deposit%20details." target="_blank" rel="noopener" class="hover:text-white transition-colors">Booking &amp; Deposit</a></li>
+          <li><a href="https://wa.me/916360632742?text=Hello%2C%20please%20share%20the%20current%20rent%20and%20availability." target="_blank" rel="noopener" class="hover:text-white transition-colors">Rent &amp; Availability</a></li>
+          <li><a href="https://wa.me/916360632742?text=Hello%2C%20please%20share%20the%20house%20rules%20and%20gate%20timings." target="_blank" rel="noopener" class="hover:text-white transition-colors">House Rules</a></li>
+          <li><a href="#rooms" class="hover:text-white transition-colors">Room Options</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-4">
+        <p class="font-semibold text-sm mb-4 text-porcelain/40 tag-chip uppercase tracking-widest">Visit / Contact</p>
+        <div class="space-y-4 text-sm text-porcelain/70 mb-5">
+          <address class="not-italic flex items-start gap-2.5">
+            <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 shrink-0 text-amber"></i>
+            <span><strong class="text-porcelain">A Block:</strong> Gate 01, St. Mary’s Church Road, opposite Kristu Jayanti College, K. Narayanapura P.O., Kothanur, Bengaluru, Karnataka 560077<br><a href="https://share.google/CDcQvb9XAm4qNpDab" target="_blank" rel="noopener" class="inline-flex items-center gap-1 mt-1 text-amber hover:text-amber-400 font-semibold">Get directions <i data-lucide="external-link" class="w-3 h-3"></i></a></span>
+          </address>
+          <address class="not-italic flex items-start gap-2.5">
+            <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 shrink-0 text-amber"></i>
+            <span><strong class="text-porcelain">B Block:</strong> 243/5, No. 2 Main Road, near Kristu Jayanti College, Kothanur, Bengaluru, Karnataka 560077<br><a href="https://share.google/N2vpLyDHGszIqOJlW" target="_blank" rel="noopener" class="inline-flex items-center gap-1 mt-1 text-amber hover:text-amber-400 font-semibold">Get directions <i data-lucide="external-link" class="w-3 h-3"></i></a></span>
+          </address>
+          <p class="flex items-center gap-2.5"><i data-lucide="phone" class="w-4 h-4 text-amber"></i> <a href="tel:+916360632742" class="hover:text-white">+91 63606 32742</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-porcelain/40 tag-chip">
+      <p>© 2026 SLS COMFORTS PG. ALL RIGHTS RESERVED.</p>
+      <p>FEEL LIKE HOME.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a href="https://wa.me/916360632742" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+   class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald flex items-center justify-center shadow-lift">
+  <span class="whatsapp-pulse absolute inset-0 rounded-full"></span>
+  <i data-lucide="message-circle" class="w-6 h-6 text-white relative z-10"></i>
+</a>
+
+<!-- ============ SCHEDULE VISIT MODAL ============ -->
+<div id="modalOverlay" class="fixed inset-0 bg-ink/75 backdrop-blur-sm z-[60] hidden items-center justify-center p-5" role="dialog" aria-modal="true" aria-labelledby="visitModalTitle" aria-describedby="visitModalDescription" aria-hidden="true">
+  <div id="modalCard" class="bg-darkcard border border-white/15 rounded-3xl max-w-md w-full max-h-[90vh] overflow-y-auto p-7 lg:p-9 relative text-porcelain" tabindex="-1">
+    <button type="button" onclick="closeModal()" aria-label="Close schedule visit dialog" class="sticky top-0 z-20 ml-auto -mr-2 -mt-2 mb-1 w-10 h-10 rounded-full border border-white/15 bg-darkcard/95 shadow-lg backdrop-blur flex items-center justify-center hover:bg-white/10 hover:border-amber/50 hover:rotate-90 transition-all duration-300">
+      <i data-lucide="x" class="w-4 h-4"></i>
+    </button>
+    <p class="tag-chip text-xs font-semibold text-amber uppercase tracking-widest mb-2">Schedule a Visit</p>
+    <h3 id="visitModalTitle" class="font-display font-extrabold text-2xl mb-2">Come see your room in person</h3>
+    <p id="visitModalDescription" class="text-sm text-porcelain/60 mb-6">Enter your details and we’ll prepare a WhatsApp message for the residence manager.</p>
+    <p id="selectedRoomNotice" class="hidden mb-5 rounded-xl border border-amber/25 bg-amber/10 px-4 py-3 text-sm text-amber"></p>
+
+    <form id="visitForm" onsubmit="submitVisit(event)" class="space-y-4">
+      <input id="visitRoom" name="room" type="hidden">
+      <div>
+        <label for="visitName" class="text-xs font-semibold text-white/60 mb-1.5 block">Full Name</label>
+        <input required id="visitName" name="name" type="text" autocomplete="name" minlength="2" maxlength="60" class="w-full border border-white/15 rounded-lg py-3 px-3.5 text-sm bg-white/5 focus:outline-none focus:border-amber text-white" placeholder="Resident Name">
+      </div>
+      <div>
+        <label for="visitPhone" class="text-xs font-semibold text-white/60 mb-1.5 block">Phone Number</label>
+        <input required id="visitPhone" name="phone" type="tel" autocomplete="tel" inputmode="numeric" maxlength="17" aria-describedby="visitPhoneHint" class="w-full border border-white/15 rounded-lg py-3 px-3.5 text-sm bg-white/5 focus:outline-none focus:border-amber text-white" placeholder="+91 98765 43210">
+        <p id="visitPhoneHint" class="text-xs text-white/45 mt-1.5">Enter a valid 10-digit Indian mobile number.</p>
+      </div>
+      <div>
+        <label for="visitBlock" class="text-xs font-semibold text-white/60 mb-1.5 block">Preferred Block</label>
+        <select id="visitBlock" name="block" class="w-full border border-white/15 rounded-lg py-3 px-3.5 text-sm bg-white/5 focus:outline-none focus:border-amber text-white">
+          <option class="bg-darkcard">A Block — Narayanapura</option>
+          <option class="bg-darkcard">B Block — Narayanapura</option>
+        </select>
+      </div>
+      <div id="visitDateTimeGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="visit-datetime-card">
+          <label for="visitDate" class="flex items-center gap-2 text-xs font-semibold text-white/60 mb-2">
+            <span class="visit-datetime-icon"><i data-lucide="calendar-days" class="w-4 h-4"></i></span>
+            Preferred Date
+          </label>
+          <input required id="visitDate" name="date" type="date" class="visit-datetime-input">
+        </div>
+        <div class="visit-datetime-card">
+          <label for="visitTime" class="flex items-center gap-2 text-xs font-semibold text-white/60 mb-2">
+            <span class="visit-datetime-icon"><i data-lucide="clock-3" class="w-4 h-4"></i></span>
+            Preferred Time
+          </label>
+          <input required id="visitTime" name="time" type="time" class="visit-datetime-input">
+        </div>
+      </div>
+      <button type="submit" class="w-full bg-amber text-ink font-bold py-3.5 rounded-xl hover:bg-amber-400 transition-colors duration-300 mt-2">
+        Confirm Visit Request
+      </button>
+    </form>
+    <p id="modalSuccess" class="hidden text-center text-emerald font-semibold text-sm mt-4" role="status" aria-live="polite">
+      WhatsApp is ready with your visit request. If it did not open,
+      <a id="whatsappFallback" href="https://wa.me/916360632742" target="_blank" rel="noopener" class="underline underline-offset-2">tap here</a>.
+    </p>
+  </div>
+</div>
+
+<script defer src="js/media-assets.js"></script>
+<script defer src="js/app.js"></script>
+</body>
+</html>

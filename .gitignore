@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.browser-check/
+.netlify/
+.env
+.env.*
+*.log
+
+# Original large media stays on this computer. Optimized media/ is published.
+/*.jpg
+/*.jpeg
+/*.mp4
