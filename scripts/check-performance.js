@@ -57,10 +57,18 @@ const browser = spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.
   await evaluate("document.querySelector('.hover-video-card').click()");
   await sleep(1000);
   assert(await evaluate("document.querySelector('.interactive-hover-video').dataset.loaded === 'true'"), 'Tour loads on click');
+  for (let i = 0; i < 30; i++) {
+    if (await evaluate("document.querySelector('.interactive-hover-video').classList.contains('has-frame')")) break;
+    await sleep(200);
+  }
+  assert(await evaluate("document.querySelector('.video-poster').hidden"), 'Tour thumbnail hidden during actual playback');
+  await evaluate("document.querySelector('.interactive-hover-video').dispatchEvent(new Event('waiting'))");
+  assert(await evaluate("document.querySelector('.video-poster').hidden"), 'Buffering keeps last frame without showing thumbnail');
   await evaluate("document.querySelector('.interactive-hover-video').dispatchEvent(new Event('error'))");
   assert(await evaluate("document.querySelector('.hover-video-card').classList.contains('video-unavailable')"), 'Failed video retains preview state');
   assert.equal(await evaluate("getComputedStyle(document.querySelector('.interactive-hover-video')).opacity"), '0');
   assert(await evaluate("document.querySelector('.video-poster').naturalWidth > 0"), 'First-frame thumbnail visible after failure');
+  assert(await evaluate("!document.querySelector('.video-poster').hidden"), 'Failed playback restores thumbnail');
   const screenshot = await send('Page.captureScreenshot', { format:'png' });
   fs.writeFileSync('.browser-check/mobile.png', Buffer.from(screenshot.data, 'base64'));
   await send('Emulation.setDeviceMetricsOverride', { width:1440, height:1000, deviceScaleFactor:1, mobile:false });
@@ -70,7 +78,18 @@ const browser = spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.
   await sleep(1200);
   assert(await evaluate("document.getElementById('heroVideo').paused"), 'Reduced motion pauses hero');
   assert.equal(await evaluate("document.querySelectorAll('.room-hover-video').length"), 0, 'Missing room videos omitted');
+  await send('Emulation.setEmulatedMedia', { features:[{ name:'prefers-reduced-motion', value:'no-preference' }] });
+  await evaluate("document.getElementById('home').scrollIntoView({behavior:'instant'})");
+  await sleep(300);
+  await evaluate("playVideo(document.getElementById('heroVideo'))");
+  for (let i = 0; i < 30; i++) {
+    if (await evaluate("document.getElementById('heroVideo').classList.contains('has-frame')")) break;
+    await sleep(200);
+  }
+  assert(await evaluate("document.getElementById('heroVideo').classList.contains('has-frame')"), 'Hero plays original video');
+  assert(await evaluate("document.getElementById('heroPoster').hidden"), 'Hero thumbnail hidden during playback');
+  assert.equal(await evaluate("getComputedStyle(document.getElementById('heroVideo')).opacity"), '1', 'Hero fully opaque');
   assert.equal(errors.length, 0, 'No runtime exceptions');
-  console.log('PASS: mobile loading, optimized images, room tabs, on-demand playback, video failure thumbnail, reduced motion, no runtime exceptions.');
+  console.log('PASS: mobile loading, room tabs, original tour and hero playback, hidden thumbnails while playing/buffering, fallback on error, reduced motion, no runtime exceptions.');
   ws.close();
 })().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => browser.kill());

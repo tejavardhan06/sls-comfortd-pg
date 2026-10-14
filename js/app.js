@@ -128,15 +128,22 @@ function prepareVideo(video) {
   if (video.dataset.prepared) return;
   video.dataset.prepared = 'true';
   const card = video.closest('.hover-video-card, .room-card-container');
+  const poster = video.id === 'heroVideo'
+    ? document.getElementById('heroPoster')
+    : video.previousElementSibling?.matches('.video-poster') ? video.previousElementSibling : null;
   const showPoster = () => {
     video.classList.remove('has-frame');
+    if (poster) poster.hidden = false;
     card?.classList.remove('is-playing');
   };
   video.addEventListener('playing', () => {
     video.classList.add('has-frame');
+    if (poster) poster.hidden = true;
     card?.classList.add('is-playing');
+    card?.classList.remove('video-unavailable');
   });
-  video.addEventListener('waiting', showPoster);
+  // Keep the last decoded frame during buffering rather than flash the thumbnail.
+  video.addEventListener('emptied', showPoster);
   video.addEventListener('pause', showPoster);
   video.addEventListener('error', () => {
     video.pause();
@@ -196,6 +203,7 @@ function initHeroVideo() {
     video.poster = asset.poster;
     const poster = document.getElementById('heroPoster');
     poster.src = asset.poster;
+    poster.hidden = false;
     video.load();
     if (finePointerQuery.matches && !prefersReducedMotion.matches && !lowBandwidth() && !document.hidden && video.dataset.inViewport !== 'false') playVideo(video);
   };

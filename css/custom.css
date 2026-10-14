@@ -203,7 +203,8 @@
   .nav-link.nav-active { color:#fff; }
   .nav-link.nav-active::after { width:100%; }
   #heroVideo { opacity:0; }
-  #heroVideo.has-frame { opacity:.9; }
+  #heroVideo.has-frame { opacity:1; }
+  #heroPoster[hidden], .video-poster[hidden] { display:none; }
   .hover-video-card.video-unavailable::after { content:'Preview image'; }
   .hover-video-card.video-unavailable .play-indicator { opacity:0; }
   .hover-video-card, .room-card-container { content-visibility:auto; contain-intrinsic-size:auto 600px; }
