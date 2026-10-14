@@ -35,7 +35,7 @@ const browser = spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.
     ws.send(JSON.stringify({ id, method, params }));
   });
   const evaluate = async expression => {
-    const response = await send('Runtime.evaluate', { expression, returnByValue:true, awaitPromise:true });
+    const response = await send('Runtime.evaluate', { expression, returnByValue:true, awaitPromise:true, userGesture:true });
     if (response.exceptionDetails) throw new Error(JSON.stringify(response.exceptionDetails));
     return response.result.value;
   };
@@ -46,7 +46,8 @@ const browser = spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.
   await send('Page.navigate', { url:pathToFileURL(path.resolve('index.html')).href });
   await sleep(2000);
   assert.equal(await evaluate("document.querySelectorAll('.room-card-container').length"), 3);
-  assert.equal(await evaluate("document.querySelectorAll('.video-poster').length"), 6);
+  assert.equal(await evaluate("document.querySelectorAll('.video-poster').length"), 0);
+  assert(await evaluate("[...document.querySelectorAll('.interactive-hover-video')].every(video => video.controls && !video.hasAttribute('poster') && video.querySelector('source').getAttribute('src').startsWith('media/'))"), 'Native controls and direct sources, no posters');
   assert.equal(requests.filter(url => /\.mp4$/.test(url)).length, 0, 'No mobile video downloads before interaction');
   assert(await evaluate("document.getElementById('heroPoster').naturalWidth > 0"), 'Hero thumbnail loads');
   await evaluate("document.querySelector('[data-tab=double]').click()");
@@ -54,21 +55,18 @@ const browser = spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.
   assert(await evaluate("[...document.querySelectorAll('.room-photo-img')].every(img => img.src.includes('/media/'))"), 'Available images optimized');
   await evaluate("document.querySelector('.hover-video-card').scrollIntoView({behavior:'instant'})");
   await sleep(300);
-  await evaluate("document.querySelector('.hover-video-card').click()");
+  await evaluate("document.querySelector('.interactive-hover-video').play()");
   await sleep(1000);
-  assert(await evaluate("document.querySelector('.interactive-hover-video').dataset.loaded === 'true'"), 'Tour loads on click');
-  for (let i = 0; i < 30; i++) {
-    if (await evaluate("document.querySelector('.interactive-hover-video').classList.contains('has-frame')")) break;
-    await sleep(200);
-  }
-  assert(await evaluate("document.querySelector('.video-poster').hidden"), 'Tour thumbnail hidden during actual playback');
+  assert(await evaluate("document.querySelector('.interactive-hover-video').currentTime > 0"), 'Original tour plays on mobile');
   await evaluate("document.querySelector('.interactive-hover-video').dispatchEvent(new Event('waiting'))");
-  assert(await evaluate("document.querySelector('.video-poster').hidden"), 'Buffering keeps last frame without showing thumbnail');
-  await evaluate("document.querySelector('.interactive-hover-video').dispatchEvent(new Event('error'))");
-  assert(await evaluate("document.querySelector('.hover-video-card').classList.contains('video-unavailable')"), 'Failed video retains preview state');
-  assert.equal(await evaluate("getComputedStyle(document.querySelector('.interactive-hover-video')).opacity"), '0');
-  assert(await evaluate("document.querySelector('.video-poster').naturalWidth > 0"), 'First-frame thumbnail visible after failure');
-  assert(await evaluate("!document.querySelector('.video-poster').hidden"), 'Failed playback restores thumbnail');
+  assert.equal(await evaluate("getComputedStyle(document.querySelector('.interactive-hover-video')).opacity"), '1', 'Player remains visible while buffering');
+  await evaluate("document.querySelector('.interactive-hover-video').pause()");
+  assert.equal(await evaluate("getComputedStyle(document.querySelector('.interactive-hover-video')).opacity"), '1', 'Player controls remain visible when paused');
+  for (let i = 1; i < 6; i++) {
+    await evaluate(`document.querySelectorAll('.interactive-hover-video')[${i}].play()`);
+    await sleep(250);
+    assert(await evaluate(`document.querySelectorAll('.interactive-hover-video')[${i}].videoWidth > 0`), 'Tour decodes on mobile');
+  }
   const screenshot = await send('Page.captureScreenshot', { format:'png' });
   fs.writeFileSync('.browser-check/mobile.png', Buffer.from(screenshot.data, 'base64'));
   await send('Emulation.setDeviceMetricsOverride', { width:1440, height:1000, deviceScaleFactor:1, mobile:false });
@@ -90,6 +88,6 @@ const browser = spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.
   assert(await evaluate("document.getElementById('heroPoster').hidden"), 'Hero thumbnail hidden during playback');
   assert.equal(await evaluate("getComputedStyle(document.getElementById('heroVideo')).opacity"), '1', 'Hero fully opaque');
   assert.equal(errors.length, 0, 'No runtime exceptions');
-  console.log('PASS: mobile loading, room tabs, original tour and hero playback, hidden thumbnails while playing/buffering, fallback on error, reduced motion, no runtime exceptions.');
+  console.log('PASS: six mobile tour videos decode, native controls visible during pause/buffering, no tour thumbnails, no initial video downloads, room tabs, hero playback, reduced motion, no runtime exceptions.');
   ws.close();
 })().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => browser.kill());

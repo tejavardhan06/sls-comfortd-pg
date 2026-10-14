@@ -128,7 +128,7 @@
     background: #000;
     position:absolute;
     inset:0;
-    opacity:0;
+    opacity:1;
   }
   .interactive-hover-video.has-frame { opacity:1; }
   .video-poster { width:100%; height:100%; object-fit:contain; }
@@ -164,7 +164,7 @@
     box-shadow:0 28px 60px -30px rgba(227,162,60,.7);
   }
   .hover-video-card::after {
-    content:'Click to play';
+    content:none;
     position:absolute;
     top:1rem;
     right:1rem;

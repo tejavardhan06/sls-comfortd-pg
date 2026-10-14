@@ -236,27 +236,15 @@ function initTourVideos() {
     const video = card.querySelector('.interactive-hover-video');
     if (!video) return;
     card.dataset.tourReady = 'true';
-    card.setAttribute('role', 'button');
-    card.setAttribute('tabindex', '0');
     const title = card.querySelector('h4')?.textContent.trim() || 'video tour';
-    const asset = mediaAsset(video.querySelector('source').dataset.src);
-    video.querySelector('source').dataset.src = asset.src;
-    video.poster = asset.poster;
-    observeVideo(video);
-    const updateLabel = () => card.setAttribute('aria-label', (video.paused ? 'Play ' : 'Pause ') + title);
-    updateLabel();
-    const toggleTour = () => {
-      if (video.paused) playVideo(video);
-      else video.pause();
-    };
-    card.addEventListener('click', toggleTour);
-    card.addEventListener('keydown', event => {
-      if (event.key !== 'Enter' && event.key !== ' ') return;
-      event.preventDefault();
-      toggleTour();
+    video.setAttribute('aria-label', title);
+    // Native controls start playback directly from the user's tap on mobile.
+    // No card click handler, thumbnail overlay, or visibility observer interferes.
+    video.addEventListener('play', () => {
+      document.querySelectorAll('video').forEach(other => {
+        if (other !== video) other.pause();
+      });
     });
-    video.addEventListener('play', updateLabel);
-    video.addEventListener('pause', updateLabel);
   });
 }
 
